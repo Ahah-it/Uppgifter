@@ -30,8 +30,8 @@ namespace Lektion9
                 foreach (Person p in personer)
                 {
                     p.Move(width, height);
-                    p.Direction.X = rng.Next(-1, 1);
-                    p.Direction.Y = rng.Next(-1, 1);
+                    p.Direction.X = rng.Next(-1, 2);
+                    p.Direction.Y = rng.Next(-1, 2);
 
                 }
 
@@ -42,7 +42,7 @@ namespace Lektion9
                 UppdateraFängelse(personer, fängslade);
                 PrintFängelse(fängslade);
 
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
             }
         }
 
@@ -147,14 +147,14 @@ namespace Lektion9
 
             for (int i = 0; i < antalPoliser; i++)
             {
-                Direction dir = new Direction(rng.Next(-1, 1), rng.Next(-1, 1));
+                Direction dir = new Direction(rng.Next(-1, 2), rng.Next(-1, 2));
                 Position pos = new Position(rng.Next(0, width), rng.Next(0, height));
                 personer.Add(new Polis(pos, dir));
             }
 
             for (int i = 0; i < antalMedborgare; i++)
             {
-                Direction dir = new Direction(rng.Next(-1, 1), rng.Next(-1, 1));
+                Direction dir = new Direction(rng.Next(-1, 2), rng.Next(-1, 2));
                 Position pos = new Position(rng.Next(0, width), rng.Next(0, height));
                 Medborgare tmp = new Medborgare(pos,dir);
                 tmp.Items.Push(Item.Klocka);
@@ -167,7 +167,7 @@ namespace Lektion9
 
             for (int i = 0; i < antalTjuvar; i++)
             {
-                Direction dir = new Direction(rng.Next(-1, 1), rng.Next(-1, 1));
+                Direction dir = new Direction(rng.Next(-1, 2), rng.Next(-1, 2));
                 Position pos = new Position(rng.Next(0, width), rng.Next(0, height));
                 personer.Add(new Tjuv(pos, dir));
             }

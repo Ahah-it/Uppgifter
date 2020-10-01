@@ -13,7 +13,7 @@ namespace Lektion6
             var diskotek = new List<Person>();
             diskotek.Add(new Person(true, 0, false));
 
-             for(int i=0; i < 1000; i++) {
+             for(int i=0; i < 10000; i++) {
                 diskotek.Add(new Person(false, 0, false));
              }
 
